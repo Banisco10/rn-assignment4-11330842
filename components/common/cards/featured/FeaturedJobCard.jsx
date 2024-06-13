@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, Image, ImageBackground } from 'react-native'
 
-const containerColors = ['blue', '#0D0D26', 'yellow', 'red', 'gray', 'orange', 'black', 'green']; // Add more colors as needed
+const containerColors = ['#1976D2', '#0D0D26', '#FFC107', '#EC1D23', '#AFB0B6', '#395185', 'black', 'green']; // Add more colors as needed
 
 const FeaturedJobCard = ({ item, selectedFeatured, index }) => {
   return (

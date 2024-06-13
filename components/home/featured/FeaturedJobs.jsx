@@ -116,12 +116,10 @@ const styles = StyleSheet.create({
     },
     headerTitle: {
         fontSize: 16,
-        fontFamily: 'DMSemibold',
         color: '#0D0D26'
     },
     headerBtn: {
         fontSize: 14,
-        fontFamily: 'DMMedium',
         color: '#95969D'
         }
 })

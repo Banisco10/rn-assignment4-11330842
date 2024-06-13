@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
         color: 'black',
     },
     welcomeMessage: {
-      fontFamily: 'DMBold',
       fontSize: 20,
       marginTop: 2,
       color: '#95969D'
@@ -83,11 +82,10 @@ const styles = StyleSheet.create({
       alignItems: "center",
       borderRadius: 16,
       height: "100%",
-      backgroundColor: 'grey',
+      backgroundColor: '#AFB0B6',
       color: '#95969D'
     },
     searchInput: {
-      fontFamily: 'DMRegular',
       width: "100%",
       height: "100%",
       paddingHorizontal: 16,
@@ -98,7 +96,7 @@ const styles = StyleSheet.create({
       borderRadius: 12,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: 'grey'
+      backgroundColor: '#AFB0B6'
     },
     searchBtnImage: {
       width: 26,
