@@ -89,7 +89,7 @@ const FeaturedJobs = () => {
     <View style={styles.featuredContainer}>
         <FlatList
           data={DATA}
-          renderItem={({ item }) => <FeaturedJobCard item={item} />}
+          renderItem={({ item, index }) => <FeaturedJobCard item={item} index={index} />}
           keyExtractor={(item, index) => index.toString()}
           contentContainerStyle={styles.contentContainerStyle}
           horizontal

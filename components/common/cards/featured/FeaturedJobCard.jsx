@@ -1,9 +1,12 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity, Image, ImageBackground } from 'react-native'
 
-const FeaturedJobCard = ({ item, selectedFeatured }) => {
+const containerColors = ['blue', '#0D0D26', 'yellow', 'red', 'gray', 'orange', 'black', 'green']; // Add more colors as needed
+
+const FeaturedJobCard = ({ item, selectedFeatured, index }) => {
   return (
-    <TouchableOpacity style={styles.container(selectedFeatured, item)}>
+    <TouchableOpacity style={styles.container(selectedFeatured, item, index, containerColors)}>
+      <ImageBackground source={require('../../../icons/Mask Group.png')}>
       <View style={styles.infoContainer}>
         <View style={styles.imageContainer}>
         <Image
@@ -21,6 +24,7 @@ const FeaturedJobCard = ({ item, selectedFeatured }) => {
         </View>
         </View>
       </View>
+      </ImageBackground>
     </TouchableOpacity>
   )
 }
@@ -29,8 +33,8 @@ export default FeaturedJobCard
 
 
 const styles = StyleSheet.create({
-    container: (selectedFeatured, item) => ({
-      backgroundColor: selectedFeatured === item.featured ? 'black' : '#FBF9F7',
+    container: (selectedFeatured, item, index, containerColors) => ({
+      backgroundColor: selectedFeatured === item.featured ? containerColors[index % containerColors.length] : '#FBF9F7',
       padding: 10,
       columnGap: 10,
       marginTop: 30,
