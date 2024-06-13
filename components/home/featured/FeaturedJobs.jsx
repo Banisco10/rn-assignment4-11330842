@@ -93,6 +93,7 @@ const FeaturedJobs = () => {
           keyExtractor={(item, index) => index.toString()}
           contentContainerStyle={styles.contentContainerStyle}
           horizontal
+          showsHorizontalScrollIndicator={false}
         />
       </View>
    </View>

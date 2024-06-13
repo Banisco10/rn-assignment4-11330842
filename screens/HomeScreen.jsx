@@ -9,7 +9,7 @@ import FeaturedJobs from '../components/home/featured/FeaturedJobs'
 const HomeScreen = () => {
   return (
     <SafeAreaView>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
     <View>
         <Welcome />
         <FeaturedJobs />
