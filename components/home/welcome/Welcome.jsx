@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     container: {
        width: '100%',
        flexDirection: 'row',
-       gap: 75,
-       margin: 10
+       marginRight: 10, 
+       padding: 15,
     },
     image: {
       flexDirection: 'row',
@@ -96,10 +96,13 @@ const styles = StyleSheet.create({
       borderRadius: 12,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: '#AFB0B6'
+      backgroundColor: '#AFB0B6',
     },
     searchBtnImage: {
       width: 26,
       height: 26,
     },
+    text: {
+      flex: 1,
+    }
 })

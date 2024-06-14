@@ -48,21 +48,23 @@ const styles = StyleSheet.create({
     container: {
        width: '100%',
        marginTop: 24,
-       margin: 20  
+       marginLeft: 10,
+       marginRight: 15, 
     },
     header: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 182,
+        justifyContent: 'space-between',
+        padding: 10,
+        marginLeft: -12,
     },
     headerTitle: {
         fontSize: 16,
-        fontFamily: 'DMSemibold',
         color: '#0D0D26'
     },
     headerBtn: {
         fontSize: 14,
-        fontFamily: 'DMMedium',
-        color: '#95969D'
+        color: '#95969D',
+        paddingRight: 25,
         }
 })

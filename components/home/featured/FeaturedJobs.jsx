@@ -108,12 +108,15 @@ const styles = StyleSheet.create({
     container: {
        width: '100%',
        marginTop: 24,
-       margin: 20  
+       margin: 20,  
     },
     header: {
         flexDirection: 'row',
         alignItems: 'center',
-        gap: 175,
+        justifyContent: 'space-between',
+        marginRight: 10, 
+        padding: 10,
+        marginLeft: -12,
     },
     headerTitle: {
         fontSize: 16,
@@ -121,6 +124,7 @@ const styles = StyleSheet.create({
     },
     headerBtn: {
         fontSize: 14,
-        color: '#95969D'
+        color: '#95969D',
+        paddingRight: 25,
         }
 })

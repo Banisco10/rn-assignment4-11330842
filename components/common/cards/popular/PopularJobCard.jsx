@@ -26,14 +26,15 @@ export default PopularJobCard
 
 const styles = StyleSheet.create({
   container: (selectedPopularJobs, item) => ({
-    backgroundColor: selectedPopularJobs === item.popularjobs ? '#FBF9F7' : '#FBF9F7',
+    backgroundColor: selectedPopularJobs === item.popularjobs ? '#FFFFFF' : '#FFFFFF',
     padding: 10,
     marginTop: 30,
     borderRadius: 15,
-    width: 327,
+    width: '95%',
     height: 74,
     alignItems: 'left',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    
   }),
   amount: {
     width: 110,
@@ -73,9 +74,10 @@ const styles = StyleSheet.create({
     marginTop: 8
   },
   descriptionsContainer: {
+    flex: 1,
     marginTop: 10,
     flexDirection: 'row',
-    columnGap: 40
+    justifyContent: 'space-between'
   },
 });
 
