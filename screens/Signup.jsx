@@ -27,6 +27,7 @@ const Signup = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [isFormFilled, setIsFormFilled] = useState(true);
 
   return (
     <SafeAreaView>
@@ -51,13 +52,16 @@ const Signup = () => {
           <TextInput
             style={styles.email}
             onChangeText={(emailFromInput) => setEmail(emailFromInput)}
+            keyboardType="email-address"
             id="email"
             placeholder="Email"
           />
 
           <TouchableOpacity
+            disabled={name.length < 3 || email.length < 3}
             style={styles.button}
             onPress={() => {
+              setIsFormFilled(true);
               navigation.navigate("Home", {
                 name,
                 email,
@@ -65,7 +69,9 @@ const Signup = () => {
             }}
           >
             <Text style={styles.buttonText}>
-              {capitalizeFirstLetter("Login")}
+              {name.length > 3 && email.length > 3
+                ? capitalizeFirstLetter("Login")
+                : capitalizeFirstLetter("Fill form information")}
             </Text>
           </TouchableOpacity>
         </View>

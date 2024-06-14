@@ -14,19 +14,23 @@ import { SafeAreaView } from "react-native-safe-area-context";
 const Welcome = () => {
   const route = useRoute();
   const data = route.params;
-  console.log(data);
 
   return (
     <SafeAreaView>
       <View>
         <View style={styles.container}>
           <View style={styles.text}>
-            <Text style={styles.userName}>{data.name}</Text>
-            <Text style={styles.welcomeMessage}>{data.email}</Text>
+            <Text style={styles.userName}>{data?.name}</Text>
+            <Text style={styles.welcomeMessage}>{data?.email}</Text>
           </View>
-          <TouchableOpacity style={styles.image}>
-            <Image source={require("../../icons/Ellipse.png")} />
+          <View style={styles.image}>
+          <TouchableOpacity>
+            <Image style={styles.profilePicture} source={require("../../icons/Ellipse.png")} />
+            <View style={styles.dotContainer}>
+            <Image style={styles.dot} source={require("../../icons/Ellipse 767.png")} />
+            </View>
           </TouchableOpacity>
+          </View>
         </View>
 
         <View style={styles.searchContainer}>
@@ -58,9 +62,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     marginRight: 10,
     padding: 15,
-  },
-  image: {
-    flexDirection: "row",
   },
   userName: {
     fontSize: 24,
@@ -112,4 +113,20 @@ const styles = StyleSheet.create({
   text: {
     flex: 1,
   },
+  dotContainer: {
+    position: 'absolute',
+    height: 15,
+    width: 15,
+    borderRadius: 10,
+    right: 1,
+    top: -1,
+    backgroundColor: 'white',
+  },
+  dot: {
+    marginTop: 3.5,
+    marginLeft: 3,
+  },
+  profilePicture: {
+    position: 'relative',
+  }
 });
