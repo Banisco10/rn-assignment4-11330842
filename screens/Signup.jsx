@@ -16,18 +16,18 @@ const capitalizeFirstLetter = (string) => {
 };
 
 const Signup = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
   const navigation = useNavigation();
-  const { navigate } = navigation;
+
   const handleChange = (value, id) => {
     return setFormData({
       ...formData,
       [id]: value,
     });
   };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
   return (
     <SafeAreaView>
       <View style={styles.background}>
@@ -44,13 +44,13 @@ const Signup = () => {
         <View style={styles.signup}>
           <TextInput
             style={styles.name}
-            onChangeText={(value) => handleChange(value, "name")}
+            onChangeText={(valueFromInput) => setName(valueFromInput)}
             id="name"
             placeholder="Name"
           />
           <TextInput
             style={styles.email}
-            onChangeText={(value) => handleChange(value, "email")}
+            onChangeText={(emailFromInput) => setEmail(emailFromInput)}
             id="email"
             placeholder="Email"
           />
@@ -58,7 +58,10 @@ const Signup = () => {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              navigate("Home", formData);
+              navigation.navigate("Home", {
+                name,
+                email,
+              });
             }}
           >
             <Text style={styles.buttonText}>
