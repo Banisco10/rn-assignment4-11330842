@@ -6,7 +6,7 @@ This is the repository for Assignment 4 fot the Mobile Application Development
 ## Components
 
 ### Signup 
-- A scrren that allows the user to enter their name and email and login
+- A screen that allows the user to enter their name and email and login
 
 ### HumeScreen 
 - A screen that displays the user's name and email.
